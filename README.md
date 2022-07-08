@@ -1,4 +1,4 @@
-# ctr4ever_Discord_bot_parser
+<h2># ctr4ever_Discord_bot_parser</h2>
 A text parser that converts the messages of the Records Bot on ctr4ever discord server into usable data.
 
 Ctr4ever is a highschore leaderboard website for the ps1 game Crash Team Racing.
