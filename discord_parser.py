@@ -83,12 +83,10 @@ with open("messages.txt") as file:
                 scoreStart = line.find("time of ")+8
                 scoreEnd = line.find(", has")
                 scoreRaw = line[scoreStart:scoreEnd]
-                print(scoreRaw)
                 databaseScore = scoreConvert(scoreRaw)
-                print(databaseScore)
                 storage.append([lineN, name, unixdate, trackID, databaseScore])
         elif key2 == "p":
-            print("Reached update")
+            print("Reached bot update")
             break
     #second loop is a while loop to keep reading from the same location.
     #open for suggestions for how to do this better.
@@ -108,7 +106,7 @@ with open("messages.txt") as file:
             dateStr = line[5:15]
             dateSet = datetime.strptime(dateStr, '%m/%d/%Y')
             unixdate = int(time.mktime(dateSet.timetuple()))
-            #print("Set date as "+ str(dateSet)+" on line "+str(lineN)+".\n")
+            print("Set date as "+ str(dateSet)+" on line "+str(lineN)+".\n")
             continue
         lineLen = len(line)
         if lineLen> 43:
@@ -127,19 +125,13 @@ with open("messages.txt") as file:
                 lap = 0
                 subSelect = 1
             trackStart = line.find("place in ")+9
-            print(lineN)
-            print(trackStart)
-            print("subselect"+str(subSelect))
             trackStr = line[trackStart:-(subSelect)]
-            print(trackStr)
             trackID = tracks[trackStr]+lap
-            print(trackID)
+            print("TrackID is "+str(trackID)+" on line "+str(lineN)+".\n")
             scoreStart = line.find("time of ")+8
             scoreEnd = line.find(", has")
             scoreRaw = line[scoreStart:scoreEnd]
-            databaseScore = scoreConvert(scoreRaw)
-            print(databaseScore)
-            
+            databaseScore = scoreConvert(scoreRaw)            
             nameEnd = line.find(", with")-9
             name = line[0:nameEnd]
             storage.append([lineN, name, unixdate, trackID, databaseScore])
