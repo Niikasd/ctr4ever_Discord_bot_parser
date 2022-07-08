@@ -11,7 +11,8 @@ Example:
 
 Original messages:
 
-``` — 03/03/2022 New record in Coco Park Niklas Nyberg 🇫🇮, with a time of 1'14''64, has achieved 23rd place in Coco Park```
+``` — 03/03/2022```
+```New record in Coco Park Niklas Nyberg 🇫🇮, with a time of 1'14''64, has achieved 23rd place in Coco Park```
 
 
 
