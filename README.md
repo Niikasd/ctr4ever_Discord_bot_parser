@@ -30,4 +30,4 @@ Prerequisities: Python3
 1. Download the program and place messages.txt into the same folder.
 2. Open a command prompt.
 3. Type in or copy: ```python discord_parser.py```
-If step 4 does not work, it may be you need to type one of the following instead of ```python```: ```py```, ```py3```, ```python3```.
+If step 3 does not work, it may be you need to type one of the following instead of ```python```: ```py```, ```py3```, ```python3```.
