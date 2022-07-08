@@ -11,7 +11,7 @@ Example:
 
 Original messages:
 
-![imgur](https://imgur.com/a/rD9ypGV)
+![imgur](https://i.imgur.com/WG0vSZu.png)
 
 Data conversion result as [line number, username, unix date, ctr4ever trackID, time in centiseconds]:
 
