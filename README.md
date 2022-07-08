@@ -9,7 +9,7 @@ This program is used to transform data from the bot into a usable form for re-cr
 
 Example:
 
-Original messages:
+Original messages
 
 ![imgur](https://i.imgur.com/WG0vSZu.png)
 
