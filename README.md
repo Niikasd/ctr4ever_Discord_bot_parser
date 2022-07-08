@@ -22,3 +22,13 @@ Niklas Nyberg 🇫🇮, with a time of 1'14''64, has achieved 23rd place in Coco
 Data conversion result as [line number, username, unix date, ctr4ever trackID, time in centiseconds]:
 
 [585, 'Niklas Nyberg', 1646319600, 7, 7424]
+
+<h2>How to Use</h2>
+
+Prerequisities: Python3
+
+1. Download the program and place messages.txt into the same folder.
+2. Copy the directory name.
+3. Open command prompt and type "cd" then paste the directory. IF you saved the program into a different drive you must also change your drive by typing the drive's corresponding letter (e.g. F:)
+4. Type in or copy: python discord_parser.py
+If step 4 does not work, it may be you need to type one of the following instead of "python": py, py3, python3.
