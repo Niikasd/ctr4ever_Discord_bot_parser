@@ -48,6 +48,7 @@ with open("messages.txt") as file:
     #first loop runs through the messages and gathers all times submitted before the country name bug was fixed.
     for line in file:
         lineN+=1
+        #skips pointless lines
         if line == "Records Bot\n":
             print("skipped RB line on line "+str(lineN)+".\n")
             continue
@@ -56,6 +57,7 @@ with open("messages.txt") as file:
             continue
         lineLen = len(line)
         key = line[0]
+        #updates the date.
         if key == " ":
             dateStr = line[5:15]
             dateSet = datetime.strptime(dateStr, '%m/%d/%Y')
@@ -63,6 +65,7 @@ with open("messages.txt") as file:
             print("Set date as "+ str(dateSet)+" on line "+str(lineN)+".\n")
             continue
         key2 = line[lineLen-2]
+        #gets whether it is a lap or a course.
         if key2 == ")":
             if lineLen < 40:
                 selection = line[14:lineLen-1]
@@ -75,6 +78,7 @@ with open("messages.txt") as file:
                 track = selection[0:-(subSelect)]
                 trackID = tracks[track]+lap
                 print("TrackID is "+str(trackID)+" on line "+str(lineN)+".\n")
+        #gets the user and score.
             else:
                 nameEnd = line.find(", ")
                 name = line[0:nameEnd]
@@ -86,6 +90,7 @@ with open("messages.txt") as file:
                 databaseScore = scoreConvert(scoreRaw)
                 storage.append([lineN, name, unixdate, trackID, databaseScore])
         elif key2 == "p":
+            #once the bot detects a "p" in key2 location, it means that the bot update was reached.
             print("Reached bot update")
             break
     #second loop is a while loop to keep reading from the same location.
@@ -93,6 +98,7 @@ with open("messages.txt") as file:
     while True:
         lineN+=1
         line = file.readline()
+        #skips pointless lines
         if line == "Records Bot\n":
             print("skipped RB line on line "+str(lineN)+".\n")
             continue
@@ -109,6 +115,7 @@ with open("messages.txt") as file:
             print("Set date as "+ str(dateSet)+" on line "+str(lineN)+".\n")
             continue
         lineLen = len(line)
+        #gets track, course/lap, score, and username.
         if lineLen> 43:
             key2 = line[-11]
             if key2 == "-":
