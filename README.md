@@ -11,11 +11,7 @@ Example:
 
 Original messages:
 
-``` — 03/03/2022```
-
-```New record in Coco Park Niklas Nyberg 🇫🇮, with a time of 1'14''64, has achieved 23rd place in Coco Park```
-
-
+![imgur](https://imgur.com/a/rD9ypGV)
 
 Data conversion result as [line number, username, unix date, ctr4ever trackID, time in centiseconds]:
 
